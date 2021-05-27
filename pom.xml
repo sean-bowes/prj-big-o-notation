@@ -1,0 +1,71 @@
+<project>
+
+    <!--set M2_HOME=C:\apps\apache-maven-3.2.3-->
+    <!--set M2=C:\apps\apache-maven-3.2.3-->
+    <!--set JAVA_HOME=C:\apps\java\jdk1.11_01-->
+    <!--set PATH=C:\apps\java\jdk1.11_01\bin;%PATH%-->
+    <!--set PATH=C:\apps\apache-maven-3.2.3\bin;%PATH%-->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.koisoftware</groupId>
+    <artifactId>bg</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>bg</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <spring.version>5.1.2.RELEASE</spring.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <finalName>big-o-notation</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/libs</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.7.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>1.7.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
