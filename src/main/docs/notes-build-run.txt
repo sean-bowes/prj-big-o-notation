@@ -2,6 +2,7 @@ set PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\Syst
 set PATH=%PATH%;C:\apps\mks\mksnt
 set PATH=%PATH%;C:\apps\apache-maven-3.6.3\bin
 set PATH=%PATH%;C:\apps\java\jdk-16.0.1\bin
+set PATH=%PATH%;C:\apps\gradle-7.0\bin
 set JAVA_HOME=C:\apps\java\jdk-16.0.1
 set JDK_HOME=%JAVA_HOME%
 set JRE_HOME=%JAVA_HOME%\jre

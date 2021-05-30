@@ -70,7 +70,5 @@ public class FunWithAnagrams {
         arr[2] = "anagrams";
         arr[3] = "doce";
         obj.printArray(obj.funWithAnagramsByArray(arr));
-
-
     }
 }
