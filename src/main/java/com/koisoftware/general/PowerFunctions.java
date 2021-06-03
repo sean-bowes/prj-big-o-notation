@@ -43,7 +43,7 @@ public class PowerFunctions {
             return true;
         }
 
-        int bMax = new Double(Math.floor(Math.log(num))).intValue() + 1;
+        int bMax = Double.valueOf(Math.floor(Math.log(num))).intValue() + 1;
 
         for (int b = 2; b <= bMax; b++) {
             int start = 0;
@@ -51,7 +51,7 @@ public class PowerFunctions {
 
             while (start <= end) {
                 int middle = (start + end) / 2;
-                int result = new Double(Math.pow(middle, b)).intValue();
+                int result = Double.valueOf(Math.pow(middle, b)).intValue();
 
                 if (result == num) {
                     return true;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumberOfWaysToPurchaseOil {
-    static Integer count = new Integer(0); // Global
+    static Integer count = Integer.valueOf(0); // Global
 
     public static void main(String args[]) throws Exception {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT */
@@ -39,7 +39,7 @@ public class NumberOfWaysToPurchaseOil {
         for (int i = index; i < quantities.size(); i++) {
             temp.add(quantities.get(i));
             subset(quantities, temp, i + 1, target);
-            temp.remove(new Integer(quantities.get(i)));
+            temp.remove(Integer.valueOf(quantities.get(i)));
         }
     }
 

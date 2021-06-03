@@ -109,7 +109,7 @@ public class SimpleHeapImpl<T> implements Heap<T> {
     }
 
     private static int parentIndex(int index) {
-        return new Double(Math.floor((index - 1) / 2)).intValue();
+        return Double.valueOf(Math.floor((index - 1) / 2)).intValue();
     }
 
     @Override
